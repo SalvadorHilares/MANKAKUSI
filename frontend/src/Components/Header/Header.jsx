@@ -1,21 +1,20 @@
 import React from 'react';
-import './Header.component.css';
 
 const Header = () => {
   return (
-    <header className="header">
-      <div className="logo">UNACEM</div>
+    <header className="bg-gray-800 text-white p-5 flex justify-between items-center">
+      <div className="text-2xl font-bold">UNACEM</div>
       <nav>
-        <ul>
-          <li><a href="#categories">Categorías</a></li>
-          <li><a href="#search">Buscar</a></li>
+        <ul className="flex space-x-4">
+          <li><a href="#categories" className="hover:text-gray-400">Categorías</a></li>
+          <li><a href="#search" className="hover:text-gray-400">Buscar</a></li>
         </ul>
       </nav>
-      <div className="user-actions">
-        <a href="#login">Hola, Inicia sesión</a>
-        <a href="#purchases">Productos</a>
-        <a>Despacho</a>
-        <a href="#cart"><i className="fas fa-shopping-cart"></i></a>
+      <div className="flex space-x-4 items-center">
+        <a href="#login" className="hover:text-gray-400">Hola, Inicia sesión</a>
+        <a href="#purchases" className="hover:text-gray-400">Productos</a>
+        <a className="hover:text-gray-400">Despacho</a>
+        <a href="#cart" className="hover:text-gray-400"><i className="fas fa-shopping-cart"></i></a>
       </div>
     </header>
   );

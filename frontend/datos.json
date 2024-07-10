@@ -1,0 +1,23 @@
+[
+    {
+      "title": "Caldo de mote",
+      "description": "OLLA COMÚN UNIDOS SIEMPRE",
+      "image": "./src/images/Imagen1.jpeg"
+    },
+    {
+      "title": "Mazamorra morada con arroz con leche",
+      "description": "OLLA COMÚN COCINANDO CON AMOR",
+      "image": "./src/images/Imagen2.jpeg"
+    },
+    {
+        "title": "Papa rellena",
+        "description": "OLLA COMÚN VIRGEN DEL ROSARIO AMPLIACIÓN LOS CEDROS",
+        "image": "./src/images/Imagen2.jpeg"
+    },
+    {
+        "title": "Picarones",
+        "description": "OLLA COMÚN EL MILAGRO DE NACER AMPLIACIÓN JIREH",
+        "image": "./src/images/Imagen1.jpeg"
+    }
+]
+  

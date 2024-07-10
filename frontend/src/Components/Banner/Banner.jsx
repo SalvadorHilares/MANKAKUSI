@@ -1,20 +1,12 @@
-import React from 'react'
-import './Banner.component.css'
+import React from 'react';
 
-const Banner = ({ title = "Welcome to My Website", subtitle = "Your subtitle here", backgroundColor = "#282c34", color = "#fff" }) => {
-  const bannerStyle = {
-    backgroundColor,
-    color,
-    padding: '20px',
-    textAlign: 'center'
-  };
-
+const Banner = ({ title = "Welcome to My Website", subtitle = "Your subtitle here", backgroundColor = "bg-gray-800", color = "text-white" }) => {
   return (
-    <div style={bannerStyle}>
-      <h1>{title}</h1>
-      <p>{subtitle}</p>
+    <div className={`p-5 text-center ${backgroundColor} ${color}`}>
+      <h1 className="text-4xl font-bold">{title}</h1>
+      <p className="text-lg mt-2">{subtitle}</p>
     </div>
   );
 };
 
-export default Banner
+export default Banner;

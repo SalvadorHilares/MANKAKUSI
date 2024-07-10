@@ -1,42 +1,39 @@
 import React from 'react';
-import './Footer.component.css';
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-container">
+    <footer className="bg-gray-800 text-white p-5">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
         <div className="footer-section">
-          <h4>Contacto</h4>
-          <p>hola@email.com</p>
+          <h4 className="text-xl font-bold">Contacto</h4>
+          <p className="mt-2">hola@email.com</p>
         </div>
         <div className="footer-section">
-          <h4>Sobre UNACEM</h4>
-          <ul>
-            <li><a href="#about">Nosotros</a></li>
-            <li><a href="#partners">Partners</a></li>
-            <li><a href="#press">Prensa</a></li>
-            <li><a href="#jobs">Trabaja con nosotros</a></li>
-            <li><a href="#terms">Términos y condiciones</a></li>
-            <li><a href="#privacy">Política de privacidad</a></li>
+          <h4 className="text-xl font-bold">Sobre UNACEM</h4>
+          <ul className="mt-2 space-y-2">
+            <li><a href="#about" className="hover:text-gray-400">Nosotros</a></li>
+            <li><a href="#partners" className="hover:text-gray-400">Partners</a></li>
+            <li><a href="#press" className="hover:text-gray-400">Prensa</a></li>
+            <li><a href="#jobs" className="hover:text-gray-400">Trabaja con nosotros</a></li>
+            <li><a href="#terms" className="hover:text-gray-400">Términos y condiciones</a></li>
+            <li><a href="#privacy" className="hover:text-gray-400">Política de privacidad</a></li>
           </ul>
         </div>
         <div className="footer-section">
-          <h4>Recursos</h4>
-          <ul>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#resources">Recursos Unacem</a></li>
+          <h4 className="text-xl font-bold">Recursos</h4>
+          <ul className="mt-2 space-y-2">
+            <li><a href="#blog" className="hover:text-gray-400">Blog</a></li>
+            <li><a href="#resources" className="hover:text-gray-400">Recursos Unacem</a></li>
           </ul>
         </div>
       </div>
-      <div className="footer-bottom">
-        <p>
-          Somos un equipo de profesionales que están al servicio de la comunidad
-        </p>
-        <div className="social-icons">
-          <a href="#facebook"><i className="fab fa-facebook-f"></i></a>
-          <a href="#instagram"><i className="fab fa-instagram"></i></a>
-          <a href="#linkedin"><i className="fab fa-linkedin-in"></i></a>
-          <a href="#youtube"><i className="fab fa-youtube"></i></a>
+      <div className="footer-bottom mt-5 border-t border-gray-700 pt-5 text-center md:text-left">
+        <p>Somos un equipo de profesionales que están al servicio de la comunidad</p>
+        <div className="social-icons flex justify-center md:justify-start space-x-4 mt-2">
+          <a href="#facebook" className="hover:text-gray-400"><i className="fab fa-facebook-f"></i></a>
+          <a href="#instagram" className="hover:text-gray-400"><i className="fab fa-instagram"></i></a>
+          <a href="#linkedin" className="hover:text-gray-400"><i className="fab fa-linkedin-in"></i></a>
+          <a href="#youtube" className="hover:text-gray-400"><i className="fab fa-youtube"></i></a>
         </div>
       </div>
     </footer>

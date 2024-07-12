@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './MainBody.component.css'
-import datos from '../../../datos.json'
+import datos from '../../datos.json'
 import PotCard from '../PotCard/PotCard';
 
 const MainBody = () => {
@@ -11,9 +11,10 @@ const MainBody = () => {
   }, [])
   return (
     <main className="main-content p-5 grid grid-cols-1 md:grid-cols-2 gap-4">
-      {data.map((item, index) => (
+      {data.map((item) => (
         <PotCard
-          key={index}
+          key={item.id}
+          id={item.id}
           image={item.image}
           title={item.title}
           description={item.description}

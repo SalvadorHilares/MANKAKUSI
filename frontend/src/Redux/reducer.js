@@ -1,5 +1,6 @@
 const initialState = {
-    pot : []    
+    pot : [],
+    shoppingCart : [],
 }
 
 const rootReducer = (state = initialState, action) => {

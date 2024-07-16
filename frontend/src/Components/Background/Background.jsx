@@ -7,7 +7,7 @@ const Background = () => {
         >
             <div className="bg-black bg-opacity-50 h-full flex flex-col justify-center items-center">
                 <h2 className="text-4xl text-white font-bold mb-4">PROMOCIONES TODOS LOS FINES DE SEMANA</h2>
-                <p className="text-lg text-white">Ver abajo</p>
+                <p className="text-lg text-white">Ver promocion</p>
             </div>
         </div>
     );

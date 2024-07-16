@@ -3,28 +3,28 @@
       "id": 1,
       "title": "Caldo de mote",
       "description": "UNIDOS SIEMPRE",
-      "image": "./src/images/caldoMote.jfif",
-      "price": "s/15"
+      "image": "./src/images/mote.jpeg",
+      "price": "15"
     },
     {
       "id": 2,
       "title": "Mazamorra morada con arroz con leche",
       "description": "COCINANDO CON AMOR",
-      "image": "./src/images/MazamorraLeche.jpeg",
-      "price": "s/12"
+      "image": "./src/images/mazamorra.jpeg",
+      "price": "12"
     },
     {
         "id": 3,
         "title": "Papa rellena",
         "description": "VIRGEN DEL ROSARIO AMPLIACIÓN LOS CEDROS",
-        "image": "./src/images/PapaRellena.jpeg",
-        "price": "s/10"
+        "image": "./src/images/rellena.jpeg",
+        "price": "10"
     },
     {
         "id": 4,
         "title": "Picarones",
         "description": "EL MILAGRO DE NACER AMPLIACIÓN JIREH",
         "image": "./src/images/Picarones.jpeg",
-        "price": "s/8"
+        "price": "8"
     }
 ]

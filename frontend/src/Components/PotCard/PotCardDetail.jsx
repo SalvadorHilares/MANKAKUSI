@@ -1,11 +1,15 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import potcards from '../../datos.json';
+import axios from 'axios';
 
 const PotCardDetail = () => {
   const { id } = useParams();
   const item = potcards.find(potcard => potcard.id === parseInt(id));
   const [quantity, setQuantity] = useState(1); // Estado para la cantidad de productos seleccionados
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
 
   if (!item) {
     return <div>Producto no encontrado</div>;
@@ -14,8 +18,25 @@ const PotCardDetail = () => {
   // Ajusta la ruta de la imagen para que comience con /src/images/
   const imageUrl = item.image.replace(/^\.\//, '/');
 
-  const handlePaymentRedirect = () => {
-    window.location.href = 'https://www.pasarelapago.com';
+  const handlePayment = async () => {
+    setLoading(true);
+    setError('');
+    setSuccess('');
+    try {
+      const response = await axios.post('http://localhost:5000/api/payment', {
+        amount: totalPrice,
+        description: item.title,
+      });
+      if (response.data.success) {
+        setSuccess('Pago procesado con éxito');
+      } else {
+        setError('Error al procesar el pago');
+      }
+    } catch (error) {
+      setError('Error al procesar el pago');
+    } finally {
+      setLoading(false);
+    }
   };
 
   // Funciones para incrementar y decrementar la cantidad de productos
@@ -53,11 +74,14 @@ const PotCardDetail = () => {
                 <div className="bg-gray-100 shadow-inner text-center rounded-lg p-4 mt-4 md:mt-0">
                   <h3 className="text-xl font-bold mb-2 text-center">Precio unitario: S/.{item.price}</h3>
                   <button
-                    onClick={handlePaymentRedirect}
+                    onClick={handlePayment}
                     className="mb-2 text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    disabled={loading}
                   >
-                    Pago en linea
+                    {loading ? 'Procesando...' : 'Pago en linea'}
                   </button>
+                  {error && <p className="text-red-500 text-center">{error}</p>}
+                  {success && <p className="text-green-500 text-center">{success}</p>}
                   <p className="text-base text-gray-700 mb-2 text-center">Escanee el código QR para pagar</p>
                   <div className="flex justify-center">
                     <img src="/src/images/pruebaYAPE.jpeg" alt="QR Code" className="w-32 h-32" />

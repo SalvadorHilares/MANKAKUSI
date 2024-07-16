@@ -7,8 +7,8 @@ const Header = () => {
       <div className="flex space-x-4 items-center">
         <a href="#login" className="hover:text-gray-400">Hola, Inicia sesión</a>
         <a href="#purchases" className="hover:text-gray-400">Productos</a>
-        <a className="hover:text-gray-400">Despacho</a>
-        <a href="#cart" className="hover:text-gray-400"><i className="fas fa-shopping-cart"></i></a>
+        <a href="/company-info" target="_blank" className="hover:text-gray-400">Despacho</a>
+        <a href="#cart" className="hover:text-gray-400"><i className="fas fa-shoppi ng-cart"></i></a>
       </div>
     </header>
   );

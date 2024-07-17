@@ -1,7 +1,10 @@
 import React from 'react';
 import Footer from '../Footer/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const CompanyInfo = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="p-5 bg-green-50 border border-green-900 rounded-lg">
       <h1 className="text-3xl font-bold mb-4 text-green-900 text-center">Despacho</h1>
@@ -11,6 +14,7 @@ const CompanyInfo = () => {
       <div className="flex justify-center space-x-8">
         <div className="w-1/3 p-2 text-center">
           <h2 className="text-2xl font-semibold mb-2 text-green-700">Estación del Tren</h2>
+          <p className="text-lg font-semibold text-green-700">GRATIS</p>
           <ul className="list-disc text-green-600 inline-block text-left">
             <li>Los Jardines</li>
             <li>Presbitero Maestro</li>
@@ -18,10 +22,12 @@ const CompanyInfo = () => {
             <li>Cabitos</li>
             <li>Atocongo</li>
           </ul>
+          <p className="text-sm text-green-600 mt-2">Si es envío a casa se cobrará el 20% de comisión del precio total.</p>
           <img src="/src/images/Linea1.jpeg" alt="Linea 1" className="w-48 h-48 mt-4 mx-auto" />
         </div>
         <div className="w-1/3 p-2 text-center">
           <h2 className="text-2xl font-semibold mb-2 text-green-700">Metropolitano</h2>
+          <p className="text-lg font-semibold text-green-700">GRATIS</p>
           <ul className="list-disc text-green-600 inline-block text-left">
             <li>Naranjal</li>
             <li>UNI</li>
@@ -29,27 +35,30 @@ const CompanyInfo = () => {
             <li>Plaza de Flores</li>
             <li>Matellini</li>
           </ul>
+          <p className="text-sm text-green-600 mt-2">Si es envío a casa se cobrará el 20% de comisión del precio total.</p>
           <img src="/src/images/Metropolitano.jpeg" alt="Metropolitano" className="w-48 h-48 mt-4 mx-auto" />
         </div>
         <div className="w-1/3 p-2 text-center">
           <h2 className="text-2xl font-semibold mb-2 text-green-700">Eventos</h2>
+          <p className="text-lg font-semibold text-green-700">GRATIS</p>
           <ul className="list-disc text-green-600 inline-block text-left">
             <li>Feria de Empleo</li>
             <li>Conciertos</li>
             <li>Exposiciones</li>
             <li>Festival de Gastronomía</li>
           </ul>
+          <p className="text-sm text-green-600 mt-2">Si es envío a casa se cobrará el 20% de comisión del precio total.</p>
           <img src="/src/images/Evento.jpeg" alt="Evento" className="w-48 h-48 mt-4 mx-auto" />
         </div>
       </div>
-      <div className='mb-1 text-center'>
-              <button
-                onClick={() => window.history.back()}
-                className="mb-2 text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              >
-                Volver
-              </button>
-            </div>
+      <div className="mb-1 text-center">
+        <button
+          onClick={() => navigate('/')}
+          className="mb-2 text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Volver
+        </button>
+      </div>
       <Footer />
     </div>
   );
